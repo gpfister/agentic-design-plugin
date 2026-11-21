@@ -1,0 +1,6 @@
+{
+  "name": "agentic-design-plugin",
+  "description": "Autonomous UI/UX design and design-to-code companion plugin with official PenPot MCP integration (@coding-design).",
+  "version": "0.1.0",
+  "license": "MIT"
+}
