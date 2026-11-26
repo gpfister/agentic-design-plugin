@@ -23,22 +23,9 @@ def test_plugin_manifest_valid():
     assert isinstance(data.get("description"), str) and len(data["description"]) > 0
 
 
-def test_mcp_config_valid_and_portable():
+def test_mcp_config_not_bundled():
     mcp_file = PLUGIN_ROOT / "mcp_config.json"
-    assert mcp_file.exists(), "mcp_config.json must exist"
-    raw = mcp_file.read_text(encoding="utf-8")
-    data = json.loads(raw)
-
-    assert "mcpServers" in data
-    assert "penpot" in data["mcpServers"]
-    penpot_cfg = data["mcpServers"]["penpot"]
-    assert "serverUrl" in penpot_cfg or "command" in penpot_cfg
-    if "serverUrl" in penpot_cfg:
-        assert "PENPOT_MCP_URL" in penpot_cfg["serverUrl"]
-        assert "http://localhost:4401/mcp" in penpot_cfg["serverUrl"]
-
-    for forbidden in ("/Users/", "/home/", "C:\\"):
-        assert forbidden not in raw, f"Hardcoded user path '{forbidden}' found in mcp_config.json"
+    assert not mcp_file.exists(), "mcp_config.json must not be bundled in the repository"
 
 
 def test_pyproject_valid():

@@ -18,7 +18,7 @@ Autonomous UI/UX design and design-to-code companion plugin for [Google Antigrav
 
 ## PenPot MCP Configuration
 
-[`mcp_config.json`](mcp_config.json) configures the official PenPot MCP server using a configurable HTTP/SSE endpoint:
+PenPot MCP is configured externally in your Antigravity MCP configuration (rather than bundled in this repository) using a configurable HTTP/SSE endpoint:
 
 ```json
 {
@@ -32,7 +32,7 @@ Autonomous UI/UX design and design-to-code companion plugin for [Google Antigrav
 
 ### Environment Variables
 - `PENPOT_MCP_URL` *(optional)*: Override the default PenPot MCP endpoint (`http://localhost:4401/mcp`).
-- **Stdio (`npx`) Alternative**: If your local setup uses the stdio PenPot MCP package instead of HTTP/SSE, you can override `mcp_config.json` with a `command`/`args` entry using `npx` (avoiding hardcoded machine-local paths).
+- **Stdio (`npx`) Alternative**: If your local setup uses the stdio PenPot MCP package instead of HTTP/SSE, configure the `penpot` entry in your Antigravity MCP configuration with a `command`/`args` entry using `npx` (avoiding hardcoded machine-local paths).
 
 ## Installation & Activation
 
