@@ -68,6 +68,14 @@ def test_rules_agents_md_contract():
     assert "agentic-obsidian/designs/" in content
     assert "@coding-document" in content
     assert "@coding" in content
+    assert "coding-clarify" in content
+    assert "coding-specify" in content
+    assert "## Design Resources" in content
+    assert "semantic version" in content.lower()
+    assert "DESIGN.md" in content
+    assert "assets/" in content
+    assert "docs/design/" in content
+    assert "component reuse" in content.lower()
 
 
 def test_coding_design_agent_definition():
@@ -102,6 +110,15 @@ def test_coding_design_agent_definition():
     assert "design-spec.md" in content
     assert "[QUESTION_RELAY_REQUEST]" in content
     assert "[ARTIFACT_APPROVAL_REQUEST]" in content
+    assert "coding-clarify" in content
+    assert "coding-specify" in content
+    assert "## Design Resources" in content
+    assert "semantic version" in content.lower()
+    assert "Component Reuse Audit" in content
+    assert "Local Repository Resource Sync" in content
+    assert "DESIGN.md" in content
+    assert "assets/" in content
+    assert "docs/design/" in content
 
 
 def test_coding_design_skill_definition():
@@ -116,4 +133,14 @@ def test_coding_design_skill_definition():
     assert "design-spec.md" in content
     assert "[QUESTION_RELAY_REQUEST]" in content
     assert "[ARTIFACT_APPROVAL_REQUEST]" in content
+    assert "coding-clarify" in content
+    assert "coding-specify" in content
+    assert "## Design Resources" in content
+    assert "semantic version" in content.lower()
+    assert "Component Reuse Audit" in content
+    assert "Local Repository Resource Sync" in content
+    assert "DESIGN.md" in content
+    assert "assets/" in content
+    assert "docs/design/" in content
+    assert "component reuse" in content.lower()
     assert "PENPOT_MCP_URL" in content
